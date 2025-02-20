@@ -109,23 +109,12 @@ if ($qr_result) {
 </nav>
     <main class="container py-5">
         <h2 class="text-center mb-4">Checkout</h2>
-        <p class="text-center">Please transfer the amount to the following bank account or UPI ID:</p>
-        <p class="text-center"><strong>Bank Account:</strong> 1234567890<br><strong>IFSC Code:</strong> ABCD0123456<br><strong>UPI ID:</strong> example@upi</p>
-        <?php if ($qr_code_path): ?>
-            <div class="text-center mb-4">
-                <h4>Scan QR Code:</h4>
-                <img src="<?php echo $qr_code_path; ?>" alt="UPI QR Code" width="250">
-            </div>
-        <?php endif; ?>
-        <?php if (isset($success_message)): ?>
-            <div class="alert alert-success" role="alert">
-                <?php echo $success_message; ?>
-            </div>
-        <?php elseif (isset($error_message)): ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo $error_message; ?>
-            </div>
-        <?php endif; ?>
+        <p class="text-center">Please transfer the amount using the following UPI ID or scan the QR code:</p>
+        <p class="text-center"><strong>UPI ID:</strong> gprem6783@okicici</p>
+        <div class="text-center mb-4">
+            <h4>Scan QR Code:</h4>
+            <img src="images/qr.jpeg" alt="UPI QR Code" width="250">
+        </div>
         <form method="POST" action="checkout.php">
             <div class="mb-3">
                 <label for="name" class="form-label">Name:</label>
